@@ -5,6 +5,14 @@ This repository contains a collection of exercises and practice materials for TA
 ## Curricular Unit
 Tecnologias de Análise de Comportamento, Licenciatura em Ciência de Dados Aplicada, Universidade Católica Portuguesa, 2024-2025.
 
+## Syllabus
+
+| **Module** | **Topic**           | **Lecture**                          | **Exercises** |
+| -- |---------------------|--------------------------------------|---------------|
+| 1 | Course Introduction | [lecture](lectures/TAC-Session1.pdf) | -             |
+| 2 | -                   | -                                    | -             |
+| 3 | -                   | -                                    | -             |
+
 ## Setup
 
 To get started, fork the repository from GitHub and clone it to your local machine.
