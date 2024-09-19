@@ -15,12 +15,10 @@ Tecnologias de Análise de Comportamento, Licenciatura em Ciência de Dados Apli
 
 ## Setup
 
-To get started, fork the repository from GitHub and clone it to your local machine.
-
-You can do this by clicking the "Fork" button in the top right corner of the repository page. Once you have forked the repository, you can clone it to your local machine by running the following command in your terminal:
+First, clone the repository from GitHub into your local machine. You can do this by running the following command in your terminal:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/tac-hands-on.git
+git clone https://github.com/LCDA-UCP/tac-hands-on.git
 ```
 
 Open the repository in your favorite IDE and install the dependencies (if missing):
@@ -32,26 +30,34 @@ pip install -r requirements.txt
 
 You can now commit and push your changes to your forked repository.
 
-## Updating the Repository with the Latest Changes from the Original Repository
+## Create a branch with your name
 
-If you want to update your forked repository with the latest changes from the original repository, you can do so by adding the original repository as a remote and pulling the changes from it.
-
-To add the original repository as a remote, run the following command in your terminal:
+To create a branch with your name, run the following command in your terminal:
 
 ```bash
-git remote add upstream https://github.com/LCDA-UCP/tac-hands-on.git
+git checkout -b your_name
 ```
 
-You can now pull the changes from the original repository by running the following command:
+This will create a new branch with your name and switch to it.
+
+## Pushing changes to your branch
+
+To push your changes to your branch, run the following command in your terminal:
 
 ```bash
-git pull upstream main
+git push origin your_name
 ```
 
-This will update your forked repository with the latest changes from the original repository.
+This will push your changes to your branch on GitHub.
 
-To update your forked repository on GitHub, you can push the changes by running the following command:
+## Updating your branch with the latest changes from the main branch
+
+If you want to update your branch with the latest changes from the main branch, you can do so pulling the changes from it.
+
+For that, run the following command in your terminal:
 
 ```bash
-git push origin main
+git pull origin main
 ```
+
+This will update your branch with the latest changes from the main branch.
