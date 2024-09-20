@@ -19,7 +19,14 @@ def lemmatization(text: List[str], lemmatization_dict: Dict[str, str]) -> List[s
     """
     # add code here
     # ...
-    return lemmatized_text
+    words=[]
+    for word in text:
+        if word in lemmatization_dict:
+            lemmatized_word = lemmatization_dict[word]
+            words.append(lemmatized_word)
+        else:
+            words.append(word)
+    return words
 
 if __name__ == '__main__':
     # Sample text
