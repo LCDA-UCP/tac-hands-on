@@ -1,3 +1,7 @@
+import string
+
+import contractions
+
 
 def text_to_lowercase(text: str) -> str:
     """
@@ -12,9 +16,7 @@ def text_to_lowercase(text: str) -> str:
     str
         Lowercased text.
     """
-    # add code here
-    # ...
-    return
+    return text.lower()
 
 def remove_punctuation(text: str) -> str:
     """
@@ -31,7 +33,11 @@ def remove_punctuation(text: str) -> str:
     """
     # add code here (note you can use the string package)
     # ...
-    return
+    # res = ""
+    # for char in text:
+    #     if char not in string.punctuation:
+    #        res = res + char
+    return text.translate(str.maketrans('', '', string.punctuation))
 
 def expand_contractions(text: str) -> str:
     """
@@ -48,7 +54,8 @@ def expand_contractions(text: str) -> str:
     """
     # add code here (note you can use the contractions package)
     # ...
-    return
+
+    return contractions.fix(text)
 
 
 if __name__ == '__main__':
