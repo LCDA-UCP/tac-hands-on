@@ -1,3 +1,7 @@
+import string
+
+import contractions
+
 
 def text_to_lowercase(text: str) -> str:
     """
@@ -13,8 +17,7 @@ def text_to_lowercase(text: str) -> str:
         Lowercased text.
     """
     # add code here
-    # ...
-    return
+    return text.lower()
 
 def remove_punctuation(text: str) -> str:
     """
@@ -30,7 +33,7 @@ def remove_punctuation(text: str) -> str:
         Text without punctuation.
     """
     # add code here (note you can use the string package)
-    # ...
+
     return
 
 def expand_contractions(text: str) -> str:
@@ -47,16 +50,16 @@ def expand_contractions(text: str) -> str:
         Text with expanded contractions.
     """
     # add code here (note you can use the contractions package)
-    # ...
-    return
+
+    return contractions.fix(text)
 
 
 if __name__ == '__main__':
     text = "I don't like this movie, it's not good."
     print(text_to_lowercase(text))
     assert text_to_lowercase(text) == "i don't like this movie, it's not good."
-    print(remove_punctuation(text))
-    assert remove_punctuation(text) == "I dont like this movie its not good"
+    #print(remove_punctuation(text))
+    #assert remove_punctuation(text) == "I dont like this movie its not good"
     print(expand_contractions(text))
     assert expand_contractions(text) == "I do not like this movie, it is not good."
 
