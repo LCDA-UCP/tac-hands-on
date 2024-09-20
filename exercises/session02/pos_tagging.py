@@ -21,13 +21,19 @@ def pos_tagger(sentence: str, pos_dict: dict) -> List[Tuple[str, str]]:
     """
     # Tokenize the text (basic split by spaces and punctuation removal)
     # ...
+    tokens = sentence.lower().replace(',','').replace('.','').split(" ")
 
     # Function to tag each word using the dictionary
     def pos_tagger(word, pos_dict):
-        return # ...
+        tag = pos_dict.get(word, "unk")
+
+        return (word, tag)
 
     # Apply POS tagging (output as a list of tuples with the word and its POS tag)
     # ...
+    pos_tags = []
+    for token in tokens:
+        pos_tags.append(pos_tagger(token, pos_dict))
     return pos_tags
 
 
