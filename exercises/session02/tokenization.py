@@ -20,7 +20,7 @@ def tokenize(text: str, condition: str) -> List[str]:
     """
     # add your code here
     # ...
-
+    return text.split(condition)
 def tokenize_punctuation(text: str) -> List[str]:
     """
     Tokenize text based on punctuation.
@@ -37,8 +37,13 @@ def tokenize_punctuation(text: str) -> List[str]:
     """
     # add your code here (remember the string package)
     # ...
+    for ponc in string.punctuation:
+        text = text.replace(ponc, "@")
+    return text.split("@")
 
 if __name__ == '__main__':
     text = "This is a #sample text for #tokenization. It is a simple text."
 
     # test the functions
+    print (tokenize(text, condition=" "))
+    print (tokenize_punctuation(text))
