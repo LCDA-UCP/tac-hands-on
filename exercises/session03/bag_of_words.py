@@ -35,6 +35,9 @@ class BagOfWords:
             vocab.update(words)
 
         # Assign an index to each word in the vocabulary
+        """for idx, word in enumerate(sorted(vocab)):
+            self.vocabulary[word] = idx"""
+ 
         self.vocabulary = {word: idx for idx, word in enumerate(sorted(vocab))}
 
     def transform(self, documents: List[str]) -> np.ndarray:
