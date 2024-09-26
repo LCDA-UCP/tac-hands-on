@@ -89,6 +89,12 @@ class TFIDF:
         tf = []
         # Compute the term frequency for each word in each document
         # add your code here
+        for doc in self.documents:
+            word_count = Counter(doc)
+            size = len(doc)
+
+            tf.append({word: (wc/size) for word, wc in word_count.items()})
+
         return tf
 
     def compute_idf(self):
@@ -98,6 +104,21 @@ class TFIDF:
         idf = {}
         # Compute the inverse document frequency for each word in the corpus
         # add your code here
+        total_documents = len(self.documents)
+        words = set()
+
+        for doc in self.documents:
+            word = doc.split()
+            words.update(word)
+
+        for word in words:
+            counter = 0
+            for doc in self.documents:
+                if word in doc.split():
+                    counter += 1
+
+            idf[word] = math.log(total_documents / counter)
+
         return idf
 
     def compute_tfidf(self):
@@ -105,6 +126,8 @@ class TFIDF:
         Compute the TF-IDF score for each document.
         """
         tfidf = []
+
+
         # Compute the TF-IDF score for each word in each document
         # add your code here
         return tfidf
