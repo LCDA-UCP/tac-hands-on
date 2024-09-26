@@ -28,7 +28,8 @@ class OneHotEncoder:
         """
         # Find unique categories in the data and sort them
         # add your code here
-        # ...
+        unique = set(data)
+        self.categories = list(unique)
 
     def transform(self, data: list) -> np.ndarray:
         """
@@ -46,11 +47,19 @@ class OneHotEncoder:
         """
         # Check if the encoder has been fitted
         # add your code here
+        if self.categories is None:
+            raise ValueError("One hot needs fit before transform")
 
         # Encode the data (i.e., convert each category into a one-hot encoded vector where the index of the 1 corresponds to the category)
         one_hot_encoded = []
         # add your code here
-        # ...
+        for i in data:
+            v = [0] * len(self.categories)
+            for k, j in enumerate(self.categories):
+                if i == j:
+                    v[k] = 1
+                    break
+            one_hot_encoded.append(v)
         return np.array(one_hot_encoded)
 
     def fit_transform(self, data: list) -> np.ndarray:
@@ -90,7 +99,12 @@ class OneHotEncoder:
         inverse_data = []
         # Convert one-hot encoded data back into categorical values
         # add your code here
-        # ...
+        for i in encoded_data:
+            for k, j in enumerate(i):
+                if j == 1:
+                    categoria = self.categories[k]
+                    inverse_data.append(categoria)
+                    break
         return inverse_data
 
 if __name__ == '__main__':

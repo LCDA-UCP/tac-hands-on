@@ -18,6 +18,12 @@ def suffix_s_stemmer(terms: List[str]) -> List[str]:
     stemmed_terms = []
     # add code here
     # ...
+    for term in terms:
+        if term[-1] == "s":
+            term = term[:-1]
+            stemmed_terms.append(term)
+        else:
+            stemmed_terms.append(term)
     return stemmed_terms
 
 if __name__ == '__main__':
