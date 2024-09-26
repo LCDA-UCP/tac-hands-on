@@ -45,10 +45,16 @@ class NGram:
             Fitted n-gram instance.
         """
         # Tokenize the text into words
-        words = ...
+        words = text.split()
 
         # Generate n-grams
-        self.ngrams = ...
+        self.ngrams = []
+
+        for i in range(len(words) - self.n + 1):
+            self.ngrams.append(tuple(words[i:i + self.n]))
+
+        self.n_grams = [tuple(words[i:i + self.n]) for i in range(len(words) - self.n + 1)]
+
 
         return self
 

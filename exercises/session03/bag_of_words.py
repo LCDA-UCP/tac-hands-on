@@ -37,6 +37,7 @@ class BagOfWords:
         # Assign an index to each word in the vocabulary
         self.vocabulary = {word: idx for idx, word in enumerate(sorted(vocab))}
 
+
     def transform(self, documents: List[str]) -> np.ndarray:
         """
         Transform the documents into a bag-of-words representation.
