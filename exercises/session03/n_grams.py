@@ -45,12 +45,14 @@ class NGram:
             Fitted n-gram instance.
         """
         # Tokenize the text into words
-        words = ...
+        words = text.split()
+        self.ngrams = []
 
+        self.ngrams = [tuple(words[i : i + self.n]) for i in range(len(words) - self.n + 1)]
         # Generate n-grams
-        self.ngrams = ...
-
-        return self
+        """for i in range(len(words) - self.n + 1):
+            self.ngrams.append(tuple(words[i : i + self.n]))"""
+        return self.ngrams
 
     def transform(self) -> List[Tuple[str]]:
         """
