@@ -1,0 +1,136 @@
+import math
+from collections import Counter
+from typing import List
+
+
+class TFIDF:
+    """
+    A simple implementation of the Term Frequency-Inverse Document Frequency (TF-IDF) algorithm.
+    """
+
+    def __init__(self):
+        """
+        Initialize the TFIDF class.
+
+        Attributes
+        ----------
+        documents : list of list
+            The input documents to compute TF-IDF from.
+        tf : list of dict
+            The term frequency (TF) for each document.
+        idf : dict
+            The inverse document frequency (IDF) for each unique word in the corpus.
+        tfidf : list of dict
+            The TF-IDF score for each document.
+        """
+        self.documents = None
+        self.tf = None
+        self.idf = None
+        self.tfidf = None
+
+    def fit(self, documents: List[str]):
+        """
+        Fit the TF-IDF model on the input documents.
+
+        Parameters
+        ----------
+        documents : list of list
+            The input documents to compute TF-IDF from.
+
+        Returns
+        -------
+        self : TFIDF
+            Fitted TF-IDF instance.
+        """
+        documents_ = [document.split() for document in documents]
+        self.documents = documents_
+        self.tf = self.compute_tf()
+        self.idf = self.compute_idf()
+        self.tfidf = self.compute_tfidf()
+        return self
+
+    def transform(self) -> List[dict]:
+        """
+        Transform the fitted documents into TF-IDF vectors.
+
+        Returns
+        -------
+        list of dict
+            A list of dictionaries containing the TF-IDF vectors for the given documents.
+        """
+        return self.tfidf
+
+    def fit_transform(self, documents: List[str]) -> List[dict]:
+        """
+        Fit the TF-IDF model and transform the documents into TF-IDF vectors.
+
+        Parameters
+        ----------
+        documents : list of str
+            The input documents to compute TF-IDF from.
+
+        Returns
+        -------
+        list of dict
+            A list of dictionaries containing the TF-IDF vectors for the given documents.
+        """
+        self.fit(documents)
+        return self.transform()
+
+    def compute_tf(self):
+        """
+        Compute term frequency (TF) for each document.
+
+        Returns
+        -------
+        list of dict
+            A list of dictionaries containing the term frequency for each word in the document.
+        """
+        tf = []
+        for document in self.documents:
+            word_count = Counter(document)
+            total_words = len(document)
+            tf.append({word: count / total_words for word, count in word_count.items()})
+        return tf
+
+    def compute_idf(self):
+        """
+        Compute inverse document frequency (IDF) for each unique word in the corpus.
+        """
+        idf = {}
+        total_documents = len(self.documents)
+        all_words = set(word for document in self.documents for word in document)
+
+        for word in all_words:
+            count = sum(1 for document in self.documents if word in document)
+            idf[word] = math.log10(total_documents / count) if count != 0 else 0
+        return idf
+
+    def compute_tfidf(self):
+        """
+        Compute the TF-IDF score for each document.
+        """
+        tfidf = []
+        for document in self.tf:
+            tfidf.append({word: tf * self.idf[word] for word, tf in document.items()})
+        return tfidf
+
+
+if __name__ == '__main__':
+    documents = [
+        'good boy',
+        'good girl',
+        'good boy girl'
+    ]
+
+    # using sklearn's TfidfVectorizer (results may vary)
+    from sklearn.feature_extraction.text import TfidfVectorizer
+    vectorizer = TfidfVectorizer()
+    X = vectorizer.fit_transform(documents)
+    print(X.toarray())
+
+    # Using our implementation
+    tfidf = TFIDF()
+    tfidf.fit(documents)
+    print(tfidf.transform())
+
