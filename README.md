@@ -14,7 +14,7 @@ Tecnologias de Análise de Comportamento, Licenciatura em Ciência de Dados Apli
 | 3          | Representing Text   | [lecture](lectures/TAC-Session03.pdf) | [exercises](exercises/session03/) |
 | 4          | Text Similarity     | [lecture](lectures/TAC-Session04.pdf) | [exercises](exercises/session04/) |
 | 5          | Text Classification | [lecture](lectures/TAC-Session05.pdf) | -                                 |
-| 6          | Text Classification | -                                     | [exercises](exercises/session06/) |
+| 6          | Text Classification | [lecture](lectures/TAC-Session06.pdf) | [exercises](exercises/session06/) |
 | 7          | -                   | -                                     | -                                 |
 | 8          | -                   | -                                     | -                                 |
 
