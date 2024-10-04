@@ -7,13 +7,16 @@ Tecnologias de Análise de Comportamento, Licenciatura em Ciência de Dados Apli
 
 ## Syllabus
 
-| **Module** | **Topic**           | **Lecture**                           | **Exercises**                     |
-|------------|---------------------|---------------------------------------|-----------------------------------|
-| 1          | Course Introduction | [lecture](lectures/TAC-Session01.pdf) | -                                 |
-| 2          | Text Preprocessing  | [lecture](lectures/TAC-Session02.pdf) | [exercises](exercises/session02/) |
-| 3          | Representing Text   | [lecture](lectures/TAC-Session03.pdf) | [exercises](exercises/session03/) |
-| 4          | -                   | -                                     | -                                 |
-| 5          | -                   | -                                     | -                                 |
+| **Module** | **Topic**                      | **Lecture**                           | **Exercises**                     |
+|------------|--------------------------------|---------------------------------------|-----------------------------------|
+| 1          | Course Introduction            | [lecture](lectures/TAC-Session01.pdf) | -                                 |
+| 2          | Text Preprocessing             | [lecture](lectures/TAC-Session02.pdf) | [exercises](exercises/session02/) |
+| 3          | Representing Text              | [lecture](lectures/TAC-Session03.pdf) | [exercises](exercises/session03/) |
+| 4          | Text Similarity                | [lecture](lectures/TAC-Session04.pdf) | [exercises](exercises/session04/) |
+| 5          | Text Classification            | [lecture](lectures/TAC-Session05.pdf) | -                                 |
+| 6          | Text Classification - Hands-On | [lecture](lectures/TAC-Session06.pdf) | [exercises](exercises/session06/) |
+| 7          | -                              | -                                     | -                                 |
+| 8          | -                              | -                                     | -                                 |
 
 ## Setup
 
