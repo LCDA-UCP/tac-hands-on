@@ -17,8 +17,8 @@ Tecnologias de Análise de Comportamento, Licenciatura em Ciência de Dados Apli
 | 6          | Text Classification - Hands-On                | [lecture](lectures/TAC-Session06.pdf) | [exercises](exercises/session06-08/)  |
 | 7          | Text Clustering                               | [lecture](lectures/TAC-Session07.pdf) | -                                     |
 | 8          | Text Classification and Clustering - Hands-On | [lecture](lectures/TAC-Session08.pdf) | [exercises](exercises/session06-08/)  |
-| 9          | -                                             | -                                     | -                                     |
-| 10         | -                                             | -                                     | -                                     |
+| 9          | Web Scraping                                  | [lecture](lectures/TAC-Session09.pdf) | [exercises](exercises/session09-10/)  |
+| 10         | Web Scraping                                  | [lecture](lectures/TAC-Session10.pdf) | [exercises](exercises/session09-10/)  |
 
 ## Setup
 
