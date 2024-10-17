@@ -36,3 +36,4 @@ if __name__ == '__main__':
     lemmatized_text = lemmatization(text, lemmatization_dict)
     print(lemmatized_text)
     assert lemmatized_text == ['the', 'run', 'runner', 'run', 'quickly', 'over', 'the', 'hill']
+
