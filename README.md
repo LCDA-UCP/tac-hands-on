@@ -18,11 +18,24 @@ Tecnologias de Análise de Comportamento, Licenciatura em Ciência de Dados Apli
 | 7          | Text Clustering                               | [lecture](lectures/TAC-Session07.pdf) | -                                    |
 | 8          | Text Classification and Clustering - Hands-On | [lecture](lectures/TAC-Session08.pdf) | [exercises](exercises/session06-08/) |
 | 9          | Web Scraping                                  | [lecture](lectures/TAC-Session09.pdf) | [exercises](exercises/session09-10/) |
-| 10         | Web Scraping                                  | [lecture](lectures/TAC-Session10.pdf) | [exercises](exercises/session09-10/) |
-| 11         | -                                             | -                                     | -                                    |
-| 12         | -                                             | -                                     | -                                    |
+| 10         | Web Scraping - Hands-On                       | [lecture](lectures/TAC-Session10.pdf) | [exercises](exercises/session09-10/) |
+| 11         | Web APIs                                      | [lecture](lectures/TAC-Session11.pdf) | [exercises](exercises/session11-12/) |
+| 12         | Web APIs - Hands-On                           | [lecture](lectures/TAC-Session12.pdf) | [exercises](exercises/session11-12/) |
 | 13         | -                                             | -                                     | -                                    |
 | 14         | -                                             | -                                     | -                                    |
+| 15         | -                                             | -                                     | -                                    |
+| 16         | -                                             | -                                     | -                                    |
+| 17         | Exam                                          | -                                     | -                                    |
+| 18         | -                                             | -                                     | -                                    |
+| 19         | -                                             | -                                     | -                                    |
+| 20         | -                                             | -                                     | -                                    |
+| 21         | -                                             | -                                     | -                                    |
+| 22         | -                                             | -                                     | -                                    |
+| 23         | -                                             | -                                     | -                                    |
+| 24         | -                                             | -                                     | -                                    |
+| 25         | -                                             | -                                     | -                                    |
+| 26         | -                                             | -                                     | -                                    |
+| 27         | -                                             | -                                     | -                                    |
 
 ## Setup
 
