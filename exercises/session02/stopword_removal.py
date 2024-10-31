@@ -17,8 +17,13 @@ def remove_stopwords(tokens: List[str], stopwords: Set[str]) -> List[str]:
     List[str]
         List of tokens without stopwords.
     """
+    for token in tokens:
+        if token not in stopwords:
+            tokens.remove(token)
     # add code here
     # ...
+    return tokens
+
 
 if __name__ == '__main__':
     stopwords = {'a', 'is', 'it', 'this', 'for'}
