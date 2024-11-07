@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-from fastapi import FastAPI
-=======
 import json
 import os
 
@@ -10,17 +7,11 @@ from pydantic import BaseModel
 class TodoItem(BaseModel):
     description: str
     is_completed: bool = False
->>>>>>> origin
 
 app = FastAPI()
 
 todo_list = []
 
-<<<<<<< HEAD
-@app.get("/")
-def root():
-    return {"message": "Hello World"}
-=======
 # Load todo_list from file if it exists
 if os.path.exists("todo_list.json"):
     with open("todo_list.json", "r") as file:
@@ -34,14 +25,10 @@ def root():
 def get_items():
     return {"todo_list": todo_list}
 
->>>>>>> origin
 
 @app.post("/items")
 def create_item(item: str):
     todo_list.append(item)
-<<<<<<< HEAD
-    return {"message": f"Item {item} added successfully\n"}
-=======
     # Save the updated list to the file
     with open("todo_list.json", "w") as file:
         json.dump(todo_list, file)
@@ -101,4 +88,3 @@ def update_item(item_id: int, update_item: str):
 # # Print the response from the server
 # print(response.json())
 
->>>>>>> origin
