@@ -21,4 +21,15 @@ Her eighth husband, Rashid Rajput, was deported in 2006 to his native Pakistan a
 If convicted, Barrientos faces up to four years in prison.  Her next court appearance is scheduled for May 18.
 """
 
-print(summarizer(ARTICLE, max_length=130, min_length=30, do_sample=False))
+ARTICLE2 = """ Maria da Fonte, ou Revolta do Minho, foi uma revolta popular ocorrida na primavera de 1846 contra o governo cartista presidido por António Bernardo da Costa Cabral.
+
+A revolta resultou das tensões sociais remanescentes das guerras liberais, exacerbadas pelo grande descontentamento popular gerado pelas novas leis de recrutamento militar que se lhe seguiram, por alterações fiscais e pela proibição de realizar enterros dentro de igrejas.
+
+Iniciou-se na zona de Póvoa de Lanhoso (Minho) uma sublevação popular que se foi progressivamente estendendo a todo o norte de Portugal. A instigadora dos motins iniciais terá sido uma mulher do povo chamada Maria, natural da freguesia de Fontarcada, que por isso ficaria conhecida pela alcunha de Maria da Fonte. Como a fase inicial do movimento insurreccional teve uma forte componente feminina, acabou por ser esse o nome dado à revolta.
+
+A sublevação propagou-se depois ao resto do país e provocou a substituição do governo de Costa Cabral por um presidido por Pedro de Sousa Holstein, o 1.º Duque de Palmela. Quando, num golpe palaciano, conhecido pela Emboscada, a 6 de outubro daquele ano, a rainha D. Maria II demite o governo e nomeia o marechal João Carlos de Saldanha Oliveira e Daun, 1.º Duque de Saldanha, para constituir novo ministério, a insurreição reacende-se.
+
+O resultado foi uma nova guerra civil de 8 meses, a Patuleia, que apenas terminaria com a assinatura da Convenção de Gramido, a 30 de junho de 1847, após a intervenção de forças militares estrangeiras ao abrigo da Quádrupla Aliança. 
+"""
+
+print(summarizer(ARTICLE2, max_length=130, min_length=30, do_sample=False))
