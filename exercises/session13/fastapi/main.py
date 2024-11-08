@@ -27,7 +27,7 @@ def get_items():
 
 
 @app.post("/items")
-def create_item(item: str):
+def create_item(item: TodoItem):
     todo_list.append(item)
     # Save the updated list to the file
     with open("todo_list.json", "w") as file:
