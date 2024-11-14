@@ -27,12 +27,12 @@ def get_items():
 
 
 @app.post("/items")
-def create_item(item: str):
-    todo_list.append(item)
+def create_item(item: TodoItem):
+    todo_list.append(item.dict())
     # Save the updated list to the file
     with open("todo_list.json", "w") as file:
         json.dump(todo_list, file)
-    return {"message": f'Item "{item}" added successfully!'}
+    return {"message": f'Item "{item.description}" added successfully!'}
 
 @app.get("/items/{item_id}")
 def get_itemv1(item_id: int):
@@ -65,13 +65,13 @@ def delete_item(item: int):
 # print(response.json())
 
 @app.put("/items/{item_id}")
-def update_item(item_id: int, update_item: str):
+def update_item(item_id: int, update_item: TodoItem):
     if item_id < len(todo_list):
         old_item = todo_list[item_id]
         todo_list[item_id] = update_item
         with open("todo_list.json", "w") as file:
             json.dump(todo_list, file)
-        return {"message": f'Item "{old_item}" updated to "{update_item}" successfully!'}
+        return {"message": f'Item "{old_item.descprition}" updated to "{update_item.description}" successfully!'}
     else:
         raise HTTPException(status_code=404, detail="Item not found")
 
