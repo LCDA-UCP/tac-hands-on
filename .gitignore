@@ -162,4 +162,4 @@ cython_debug/
 .idea/
 
 exercises/session11-12/.env
-Amazon_products_Review/Amazon_Products_Review_code/.env
+Axis_hotel_review/Axis_hotel_review_code/.env
