@@ -34,7 +34,7 @@ Tecnologias de Análise de Comportamento, Licenciatura em Ciência de Dados Apli
 | 23         | -                                            | -                                     | -                                    |
 | 24         | -                                            | -                                     | -                                    |
 | 25         | -                                            | -                                     | -                                    |
-| 26         | -                                            | -                                     | -                                    |
+| 26         | Project Presentation                         | -                                     | -                                    |
 | 27         | -                                            | -                                     | -                                    |
 
 ## Setup
