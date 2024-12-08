@@ -2,7 +2,6 @@ import requests
 import csv
 from dotenv import load_dotenv
 import os
-import praw
 import googlemaps
 import pandas as pd
 
