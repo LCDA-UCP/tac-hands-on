@@ -52,7 +52,7 @@ pip install -r requirements.txt
 
 **Note: If you are using a virtual environment, make sure to activate it before running the command above. Using a conda environment is recommended.**
 
-You can now commit and push your changes to your forked repository.
+You can now commit and push your changes to the repository.
 
 ## Create a branch with your name
 
